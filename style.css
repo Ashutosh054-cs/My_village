@@ -14,27 +14,29 @@
 
 
 /* Loading Screen */
-.loading-screen{
+.loading-screen {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     z-index: 1000;
-    background:linear-gradient(160deg , var(--forest-green) , var(--sage-green)) ;
+    background: linear-gradient(160deg, var(--forest-green), var(--sage-green));
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     animation: fade-out 1s ease-out 3s forwards;
 }
+
 @keyframes fade-out {
-    to{
+    to {
         opacity: 0;
         visibility: hidden;
     }
 }
-.kui-greating{
+
+.kui-greating {
     font-size: 4rem;
     color: hsl(0 0 5%);
     font-weight: 800;
@@ -42,43 +44,49 @@
     margin-bottom: 20px;
     animation: slide-down 2s ease-out;
 }
+
 @keyframes slide-down {
-    from{
+    from {
         opacity: 0;
         transform: translateY(-50px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translate(0px);
     }
 }
-.welcome{
+
+.welcome {
     font-size: 3rem;
     color: hsl(0 0 20%);
     font-style: italic;
     animation: fade-in 1.5s ease-in;
     text-align: center;
 }
+
 @keyframes fade-in {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
-   }
+    }
 }
+
 /* Navbar styling */
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:hsl(0 0 100%); 
+    background-color: hsl(0 0 100%);
     padding: 1rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.1);;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -90,6 +98,7 @@ nav {
 
 .material-symbols-outlined {
     color: hsl(120 50 50%);
+    font-size: 24px;
 }
 
 .main-logo {
@@ -99,7 +108,7 @@ nav {
     letter-spacing: 2px;
 }
 
-.main-para{
+.main-para {
     display: flex;
     gap: 1px;
 }
@@ -132,8 +141,9 @@ a {
 a:hover {
     color: hsl(130 50 50%);
 }
+
 /* Hamburger  */
-#hamburger{
+#hamburger {
     background-color: #2d5016;
     padding: 10px 10px;
     color: white;
@@ -143,12 +153,14 @@ a:hover {
     border: none;
     border-radius: 12px;
 }
+
 /* media query  */
 @media (max-width:768px) {
-    #hamburger{
+    #hamburger {
         display: block;
     }
-    #nav-menu{
+
+    #nav-menu {
         top: 100%;
         left: 0;
         position: absolute;
@@ -159,38 +171,46 @@ a:hover {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
     }
-    #nav-menu.active{
+
+    #nav-menu.active {
         display: flex;
     }
-    #nav-menu li{
+
+    #nav-menu li {
         width: 100%;
     }
-    #nav-menu a{
+
+    #nav-menu a {
         text-align: center;
         display: block;
         /* border-bottom: 1px solid hsl(0 0 60%); */
     }
-    .main-body{
+
+    .main-body {
         text-align: center;
         align-items: center;
         justify-content: center;
     }
-    .main-body h1{
+
+    .main-body h1 {
         letter-spacing: 0px;
     }
-    .main-body h3{
+
+    .main-body h3 {
         letter-spacing: 2px;
     }
+
 }
+
 /* Main body */
-#main-body{
-    background-image: url(./images/ghati.jpg);
+#main-body {
+    background-image: url(./images/ghati.webp);
     width: 100%;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0 , 0 , 0 , 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
     display: flex;
     align-items: center;
@@ -198,17 +218,17 @@ a:hover {
     flex-direction: column;
 }
 
-#main-body h1{
-    font-size: clamp(3rem , 10vw , 8rem );
+#main-body h1 {
+    font-size: clamp(3rem, 10vw, 8rem);
     font-family: "Poppins", sans-serif;
     letter-spacing: 10px;
     color: hsl(0 0 85%);
-    padding-bottom:12px ;
+    padding-bottom: 12px;
     text-align: center;
 }
 
-#main-body h3{
-    font-size: clamp(2rem , 10vw - 2em , 3rem);
+#main-body h3 {
+    font-size: clamp(2rem, 10vw - 2em, 3rem);
     color: hsl(0 0 65%);
     font-family: "Poppins", sans-serif;
     letter-spacing: 8px;
@@ -217,114 +237,188 @@ a:hover {
 
 /* About section */
 
-#about-section{
+#about-section {
     max-width: 1320px;
     padding: 20px;
     margin: auto;
 }
 
-#about-section h1{
+.about-title {
     font-size: 48px;
     text-align: center;
     font-family: "Poppins", sans-serif;
 }
 
-#about-section .about-para{
+#about-section .about-para {
     font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
     color: hsl(0 0 40%);
 }
 
-.daringbadi{
+.daringbadi {
     color: hsl(120 80 60%);
     font-family: "Inter", sans-serif;
     letter-spacing: 2px;
 }
 
-.about-content{
+.about-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-.left , .right{
+.left,
+.right {
     flex: 1 1 300px;
 }
 
-.left img{
+.left img {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0 , 0 , 0 , 1.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.25);
 }
 
-.right{
+.right {
     text-align: left;
 }
 
-.right p{
+.right p {
     font-size: 28px;
     text-align: justify;
     line-height: 1.25;
     font-family: "Poppins", sans-serif;
 }
 
-.about-btn{
+.about-btn {
     text-align: center;
     margin-top: 8px;
     padding: 12px;
-    background-color: #2d5016;
+    background: linear-gradient(40deg,var(--forest-green), var(--sage-green));
     border: none;
     border-radius: 12px;
     transition: all 0.3s ease-out;
-    animation: jump 0.5s ease infinite ;
+    animation: jump 0.5s ease infinite;
     animation-direction: alternate;
 }
 
 @keyframes jump {
-    0%{
+    0% {
         transform: translateY(0px);
     }
-    25%{
+
+    25% {
         transform: translateY(-2px);
     }
-    50%{
+
+    50% {
         transform: translateY(-4px);
     }
-    75%{
+
+    75% {
         transform: translateY(-6px);
     }
-    100%{
+
+    100% {
         transform: translateY(-8px);
     }
 }
 
-.about-btn:hover{
+.about-btn:hover {
     background-color: #3a6914;
 }
 
-.about-btn a{
-    color: hsl(0 0 95%);
+.about-btn a {
+    color: hsl(0 0 100%);
     text-transform: none;
-    font-family:"Poppins", sans-serif ;
+    font-family: "Poppins", sans-serif;
+}
+
+@media (max-width:768px) {
+    .about-title {
+        font-size: 28px;
+    }
+
+    .daringbadi {
+        font-size: 28px;
+        padding-left: 8px;
+        letter-spacing: 2px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-section .about-para {
+        font-size: 16px;
+    }
+
+    .right p {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .left img{
+        max-width: 300px;
+    }
 }
 
 /* Animation */
 
-.autoshow{
+.autoshow {
     animation: text-appers 1s ease-in;
     animation-timeline: view();
 }
 
 @keyframes text-appers {
-    from{
+    from {
         opacity: 0;
         transform: translateY(100px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Card  */
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    flex: 1 1 200px;
+    margin-top: 24px;
+    max-width: 220px;
+    background-color: hsl(0 0 40%);
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: o 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    font-size: 1.1rem;
+    color: hsl(0 0 100%);
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
+}
+
+.value{
+    font-size: 0.95rem;
+    color: hsl(0 0 90%)
 }
