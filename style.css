@@ -75,15 +75,19 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:hsl(0 0 85%);
-    flex-wrap: wrap;
-    padding: 16px 24px;
+    background-color:hsl(0 0 100%); 
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);;
+    backdrop-filter: blur(10px);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 8px;
 }
 
@@ -94,17 +98,17 @@ nav {
 
 .main-logo {
     font-size: 2rem;
-    color: hsl(0 0 5%);
+    color: hsl(0 0 95%);
     font-family: "Inter", sans-serif;
 }
 
 .logo p {
-    color: hsl(110 50 30%);
+    color: hsl(110 50 50%);
     font-family: "Inter", sans-serif;
     margin-bottom: 8px;
 }
 
-ul {
+#nav-menu {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -114,13 +118,66 @@ ul {
 
 a {
     font-size: clamp(1rem, 10vw, 1.5rem);
-    color: hsl(0 0 10%);
+    color: hsl(0 0 95%);
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
+    font-weight: 500;
     transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
 }
 
 a:hover {
     color: hsl(130 50 50%);
+}
+/* Hamburger  */
+#hamburger{
+    background-color: #2d5016;
+    padding: 10px 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+    border: none;
+    border-radius: 12px;
+}
+/* media query  */
+@media (max-width:768px) {
+    #hamburger{
+        display: block;
+    }
+    #nav-menu{
+        top: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        background-color: hsl(0 0 85%);
+        background: transparent;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    #nav-menu.active{
+        display: flex;
+    }
+    #nav-menu li{
+        width: 100%;
+    }
+    #nav-menu a{
+        text-align: center;
+        display: block;
+        /* border-bottom: 1px solid hsl(0 0 60%); */
+    }
+}
+/* Main body */
+.main-body{
+    background-image: url(./images/ghati.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0 , 0 , 0 , 0.3);
+    background-blend-mode: multiply;
 }
