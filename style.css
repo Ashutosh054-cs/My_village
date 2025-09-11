@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --forest-green: #2d5016;
+    --sage-green: #87a96b;
+    --earth-brown: #8b4513;
+    --sky-blue: #87ceeb;
+}
+
+body {
+    background-color: #f3dab2;
+}
+
+/* Loading Screen */
+.loading-screen{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background:linear-gradient(160deg , var(--forest-green) , var(--sage-green)) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fade-out 1s ease-out 3s forwards;
+}
+@keyframes fade-out {
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.kui-greating{
+    font-size: 4rem;
+    color: hsl(0 0 5%);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slide-down 2s ease-out;
+}
+@keyframes slide-down {
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+.welcome{
+    font-size: 3rem;
+    color: hsl(0 0 20%);
+    font-style: italic;
+    animation: fade-in 1.5s ease-in;
+    text-align: center;
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+   }
+}
+/* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:hsl(0 0 85%);
+    flex-wrap: wrap;
+    padding: 16px 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 8px;
+}
+
+.material-symbols-outlined {
+    font-size: 4rem;
+    color: hsl(120 50 50%);
+}
+
+.main-logo {
+    font-size: 2rem;
+    color: hsl(0 0 5%);
+    font-family: "Inter", sans-serif;
+}
+
+.logo p {
+    color: hsl(110 50 30%);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    font-size: clamp(1rem, 10vw, 1.5rem);
+    color: hsl(0 0 10%);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: hsl(130 50 50%);
+}
