@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Daringbadi</title>
+    <!-- Material icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --earth-brown: #8b4513;
+            --sky-blue: #87ceeb;
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-block;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: #3a6914;
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            /* z-index: 1000; */
+        }
+
+        .back-btn:hover {
+            background-color: #87a96b;
+        }
+
+        @media (max-width: 768px) {
+            .back-btn {
+                font-size: 14px;
+                padding: 8px 14px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        #about-section {
+            max-width: 1320px;
+            padding: 32px;
+            margin: 16px auto;
+        }
+
+        .about-title {
+            font-size: 48px;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #about-section .about-para {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: hsl(0 0 40%);
+        }
+
+        .daringbadi {
+            color: hsl(130 50 50%);
+            font-family: "Inter", sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left,
+        .right {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .left img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+        }
+
+        .right {
+            text-align: left;
+        }
+
+        .right p {
+            font-size: 28px;
+            text-align: justify;
+            line-height: 1.25;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .about-btn {
+            text-align: center;
+            margin-top: 8px;
+            padding: 12px;
+            background-color: #3a6914;
+            border: none;
+            border-radius: 12px;
+            transition: all 0.3s ease-out;
+            margin-left: 30%;
+        }
+
+        .about-btn:hover {
+            background-color: #87a96b;
+        }
+
+        .about-btn a {
+            color: hsl(0 0 100%);
+            font-size: 18px;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+        }
+
+        @media (max-width:768px) {
+            .about-title {
+                font-size: 28px;
+            }
+
+            .daringbadi {
+                font-size: 28px;
+                padding-left: 8px;
+                letter-spacing: 2px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about-section .about-para {
+                font-size: 16px;
+            }
+
+            .right p {
+                margin-top: 8px;
+                margin-bottom: 8px;
+                font-size: 16px;
+            }
+
+            .left img {
+                max-width: 300px;
+            }
+
+            .about-btn {
+                margin-left: 25%;
+            }
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            margin-top: 24px;
+            max-width: 220px;
+            background-color: hsl(0 0 40%);
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: hsl(0 0 100%);
+            font-weight: bold;
+            font-family: "Inter", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .value {
+            font-size: 0.95rem;
+            color: hsl(0 0 90%);
+        }
+
+        .line {
+            width: 150px;
+            height: 5px;
+            background: linear-gradient(var(--sage-green), var(--forest-green));
+            margin: 1rem auto;
+            border-radius: 4px;
+        }
+        .link{
+            margin-top: 8px;
+            padding: 8px 4px;
+            border: 1px solid #2d5016;
+            border-radius: 12px;
+            background-color: #3a6914;
+        }
+        .link a{
+            color: hsl(0 0 90%);
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .link:hover{
+            background-color: #87a96b;
+        }
+
+        @media (max-width:768px) {
+            .line {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back button -->
+
+
+    <section id="about">
+        <a href="./index.html" class="back-btn">← Back</a>
+        <div id="about-section">
+            <h1 class="about-title">About <span class="daringbadi">Daringbadi</span></h1>
+            <p class="about-para">Known as the "Kashmir of Odisha", Daringbadi is a serene hill station that captivates
+                visitors with its natural beauty, rich tribal heritage, and cool mountain climate.</p>
+            <div class="line"></div>
+            <div class="about-content">
+                <div class="left">
+                    <img src="./images/Midubanda-waterfall.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p>Daringbadi, known as the <strong>“Kashmir of Odisha”</strong>, is a beautiful hill station in
+                        Kandhamal
+                        district. Surrounded by pine forests, coffee and spice plantations, and cool weather, it is one
+                        of the few
+                        places in Odisha that sometimes sees snowfall. With its natural beauty, rich tribal culture, and
+                        peaceful
+                        atmosphere, Daringbadi is a perfect place to experience both nature and tradition.</p>
+                    <p>
+                        The village is also home to warm and friendly people who preserve their unique culture and
+                        traditions.
+                        Visitors can enjoy local hospitality, explore scenic spots, and experience the simple charm of
+                        village life.
+                    </p>
+                    <button class="about-btn"><a href="https://en.wikipedia.org/wiki/Daringbadi" target="_blank">Learn
+                            more</a></button>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="icons"><img src="./images/location_card.svg" alt=""></div>
+                    <div class="title">Location</div>
+                    <div class="value">Kandhamal, Odisha</div>
+                    <div class="link"><a href="./location.html">Click Me</a></div>
+                </div>
+                <div class="card">
+                    <div class="icons"><img src="./images/family_group_card.svg" alt=""></div>
+                    <div class="title">Population</div>
+                    <div class="value">Approx, 7000+</div>
+                    <div class="link"><a href="./location.html">Click Me</a></div>
+                </div>
+                <div class="card">
+                    <div class="icons"><img src="./images/heritage_card.svg" alt=""></div>
+                    <div class="title">Heritage</div>
+                    <div class="value">Over 100 years</div>
+                    <div class="link"><a href="./culture.html">Click Me</a></div>
+                </div>
+                <div class="card">
+                    <div class="icons"><img src="./images/climate_card.svg" alt=""></div>
+                    <div class="title">Climate</div>
+                    <div class="value">Cool & Pleasant</div>
+                    <div class="link"><a href="./location.html">Click Me</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
