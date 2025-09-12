@@ -82,12 +82,13 @@ nav {
     align-items: center;
     background-color: hsl(0 0 100%);
     padding: 1rem;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    z-index: 999;
 }
 
 .logo {
@@ -169,7 +170,7 @@ a:hover {
         /* background-color: hsl(0 0 85%); */
         display: none;
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(50px);
     }
 
     #nav-menu.active {
@@ -239,7 +240,7 @@ a:hover {
 
 #about-section {
     max-width: 1320px;
-    padding: 20px;
+    padding: 28px;
     margin: auto;
 }
 
@@ -257,7 +258,7 @@ a:hover {
 }
 
 .daringbadi {
-    color: hsl(120 80 60%);
+    color: hsl(130 50 50%);
     font-family: "Inter", sans-serif;
     letter-spacing: 2px;
 }
@@ -272,13 +273,13 @@ a:hover {
 .left,
 .right {
     flex: 1 1 300px;
+    text-align: center;
 }
 
 .left img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.25);
 }
 
 .right {
@@ -296,7 +297,7 @@ a:hover {
     text-align: center;
     margin-top: 8px;
     padding: 12px;
-    background: linear-gradient(40deg,var(--forest-green), var(--sage-green));
+    background: linear-gradient(40deg, var(--forest-green), var(--sage-green));
     border: none;
     border-radius: 12px;
     transition: all 0.3s ease-out;
@@ -364,10 +365,11 @@ a:hover {
         font-size: 16px;
     }
 
-    .left img{
+    .left img {
         max-width: 300px;
     }
-    .about-btn{
+
+    .about-btn {
         margin-left: 25%;
     }
 }
@@ -392,13 +394,14 @@ a:hover {
 }
 
 /* Card  */
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-.card{
+
+.card {
     flex: 1 1 200px;
     margin-top: 24px;
     max-width: 220px;
@@ -410,12 +413,12 @@ a:hover {
     transition: all 0.2s ease;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-10px);
     box-shadow: o 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.title{
+.title {
     font-size: 1.1rem;
     color: hsl(0 0 100%);
     font-weight: bold;
@@ -423,7 +426,121 @@ a:hover {
     letter-spacing: 1px;
 }
 
-.value{
+.value {
     font-size: 0.95rem;
     color: hsl(0 0 90%)
+}
+
+.line {
+    width: 150px;
+    height: 5px;
+    background: linear-gradient(var(--sage-green), var(--forest-green));
+    margin: 1rem auto;
+    border-radius: 4px;
+}
+
+@media (max-width:768px) {
+    .line {
+        display: none;
+    }
+}
+
+/* Culture section */
+
+.culture-section {
+    max-width: 1320px;
+    padding: 28px;
+    margin: auto;
+}
+
+.culture-section h1{
+    font-size: 48px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.culture-section p{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: hsl(0 0 40%);
+}
+
+.culture-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.culture-card {
+    flex: 1 1 calc(50% - 2rem);
+    margin-top: 24px;
+    max-width: 500px;
+    background-color: hsl(0 0 95%);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-10px);
+    box-shadow: o 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.culture-icons{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.culture-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.culture-title {
+    margin: 16px;
+    font-size: 1.1rem;
+    color: var(--forest-green);
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
+}
+
+.culture-value {
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 16px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: var(--forest-green);
+}
+.culture-logo{
+    color: hsl(130 50 50%);
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+}
+@media (max-width:768px) {
+    .culture-card{
+        flex: 1 1 100%;
+    }
+    .culture-section h1{
+        font-size: 28px;
+    }
+    .culture-section p{
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .culture-icons{
+        height: 200px;
+    }
+    .culture-title{
+        margin: 8px;
+    }
 }
