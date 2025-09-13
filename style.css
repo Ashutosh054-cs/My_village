@@ -45,9 +45,10 @@
 .kui-greating {
     font-size: 4rem;
     color: hsl(0 0 5%);
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+    font-family: "Anek Odia", sans-serif;
     animation: slide-down 2s ease-out;
 }
 
@@ -69,6 +70,7 @@
     font-style: italic;
     animation: fade-in 1.5s ease-in;
     text-align: center;
+    font-family: "Anek Odia", sans-serif;
 }
 
 @keyframes fade-in {
@@ -229,17 +231,17 @@ a:hover {
     flex-direction: column;
 }
 
-.lol {
+#main-body h1 {
     font-size: clamp(3rem, 10vw, 8rem);
     font-family: "Poppins", sans-serif;
     letter-spacing: 10px;
     color: hsl(0 0 85%);
     padding-bottom: 12px;
     text-align: center;
-    animation: appear 4s forwards;
+    /* animation: appear 4s forwards; */
 }
 
-@keyframes appear {
+/* @keyframes appear {
     0%{
         transform: translateY(200px);
         transform: scale(0);
@@ -269,7 +271,7 @@ a:hover {
         transform: scale(1);
 
     }
-}
+} */
 
 #main-body h3 {
     font-size: clamp(2rem, 10vw - 2em, 3rem);
