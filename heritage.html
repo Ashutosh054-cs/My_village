@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage of Daringbadi</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        :root {
+            --forest-green: #2d5016;
+            --sage-green: #87a96b;
+            --earth-brown: #8b4513;
+            --sky-blue: #87ceeb;
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-block;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: var(--forest-green);
+            color: #fff;
+            font-size: 16px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: var(--sage-green);
+        }
+
+        /* Main section */
+        #heritage-section {
+            max-width: 1100px;
+            padding: 32px 16px;
+            margin: 48px auto;
+        }
+
+        .heritage-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .heritage-title span {
+            color: var(--forest-green);
+            font-weight: 600;
+        }
+
+        .heritage-para {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 24px;
+            color: #555;
+        }
+
+        .line {
+            width: 160px;
+            height: 5px;
+            background: linear-gradient(var(--sage-green), var(--forest-green));
+            margin: 20px auto;
+            border-radius: 4px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            text-align: center;
+            margin: 24px 0;
+            color: var(--earth-brown);
+        }
+
+        .heritage-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            background: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .heritage-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Reversed layout */
+        .heritage-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .heritage-content .left,
+        .heritage-content .right {
+            flex: 1 1 320px;
+        }
+
+        .heritage-content img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .heritage-content .right p {
+            font-size: 18px;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .heritage-title {
+                font-size: 26px;
+            }
+
+            .heritage-para {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .heritage-content,
+            .heritage-content.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .heritage-content .right p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back button -->
+    <a href="./index.html" class="back-btn">← Back</a>
+
+    <section id="heritage-section">
+        <h1 class="heritage-title">Heritage of <span>Daringbadi</span></h1>
+        <p class="heritage-para">
+            Daringbadi, the <strong>“Kashmir of Odisha”</strong>, is not only a scenic retreat but also a land rich in
+            <strong>cultural, natural, and historical</strong> heritage.
+        </p>
+
+
+        <!-- Natural Heritage Section  -->
+        <h2 class="section-title">🌿 Natural Heritage</h2>
+        <div class="line"></div>
+        <div class="heritage-content">
+            <div class="left">
+                <img src="./images/ghati-resize.jpg" alt="Natural beauty of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    Daringbadi, often called the “Kashmir of Odisha,” is a hill station surrounded by pine forests,
+                    coffee and pepper plantations, and valleys with waterfalls and rivers. Its cool climate, misty
+                    hills, and occasional winter snowfall make it unique in Odisha.
+                </p>
+                <p>
+                    The region is also rich in biodiversity, with medicinal plants, birds, and wildlife thriving in
+                    its forests. The harmony between nature, tribal life, and farming traditions like the famous
+                    Kandhamal turmeric makes Daringbadi’s natural heritage truly special.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cultural Heritage Section  -->
+        <h2 class="section-title">🏛️ Cultural Heritage</h2>
+        <div class="line"></div>
+        <div class="heritage-content reverse">
+            <div class="left">
+                <img src="./images/cultural-heritage-img1.jpg" alt="Cultural life of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    The cultural heritage of Daringbadi reflects the traditions of the Kondh and other tribal
+                    communities. Their unique customs, music, dance, and festivals showcase a way of life deeply
+                    connected with nature.
+                </p>
+                <p>
+                    Local art, handicrafts, and rituals have been passed down through generations, preserving the
+                    identity of the people and adding richness to Odisha’s cultural landscape.
+                </p>
+            </div>
+        </div>
+        <!-- History section -->
+        <h2 class="section-title">🏰 Historical Heritage</h2>
+        <div class="line"></div>
+        <div class="heritage-content">
+            <div class="left">
+                <img src="./images/history-heritageimg.webp" alt="Natural beauty of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    In the times before British rule, Daringbadi and its surrounding areas were under the sway of tribal
+                    chieftains who governed the local clans, particularly the Kondh and Kutia Kondh. These leaders
+                    followed customary laws and traditions, and their authority was based on lineage, wisdom, and
+                    respect for nature. Over time, with the arrival of colonial administrators, the region’s name
+                    “Daringbadi” is said to have come from a British officer named Daring, combined with ‘badi’, meaning
+                    settlement or village in the local dialect.
+                </p>
+                <p>
+                    The tribal heritage runs deep in rituals, folklore, and governance even today. Kings and chiefs were
+                    not merely rulers — they were custodians of land, forests, and community welfare. Many of the older
+                    folk still recount stories of how decisions were made under ancient trees, how festivals honored
+                    nature and ancestors, and how social harmony was maintained without modern enforcement. These
+                    cultural memories form an essential bridge between past and present for the people of Daringbadi.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Religous section -->
+        <h2 class="section-title">✝️ Spiritual Heritage</h2>
+        <div class="line"></div>
+        <div class="heritage-content reverse">
+            <div class="left">
+                <img src="./images/religeous-chruchimg.jpeg" alt="Cultural life of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    The spiritual heritage of Daringbadi is reflected in its blend of tribal beliefs, ancient temples,
+                    and colonial-era churches. Sacred spaces in and around the town stand as symbols of faith and
+                    resilience, visited by both locals and travelers seeking peace.
+                </p>
+                <p>
+                    Festivals, rituals, and prayers are an important part of life here, bringing together diverse
+                    communities. Whether it’s the sound of tribal chants under sacred groves or the bells of old
+                    churches, spirituality remains deeply woven into the identity of Daringbadi.
+                </p>
+            </div>
+        </div>
+
+        <!-- Agricultural -->
+
+
+        <!-- Agricultural Heritage Section -->
+        <h2 class="section-title">🌾 Agricultural Heritage</h2>
+        <div class="line"></div>
+        <div class="heritage-content">
+            <div class="left">
+                <img src="./images/agricultural-heriatge.jpg" alt="Agricultural heritage of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    Daringbadi’s agricultural heritage is a cornerstone of local life. The fertile hills support
+                    cultivation
+                    of coffee, pepper, and the world-famous Kandhamal turmeric. These crops are grown using traditional
+                    methods passed down through generations.
+                </p>
+                <p>
+                    Farming here is more than an occupation — it’s a cultural tradition. Seasonal festivals often
+                    celebrate
+                    harvests, and the produce is central to local cuisine, trade, and community identity. The terraces,
+                    plantations, and farmhouses form a picturesque landscape blending nature and agriculture
+                    harmoniously.
+                </p>
+            </div>
+        </div>
+
+        <!-- flora and foana -->
+
+
+        <!-- Flora & Fauna / Wildlife Heritage Section -->
+        <h2 class="section-title">🦜 Wildlife & Flora Heritage</h2>
+        <div class="line"></div>
+        <div class="heritage-content reverse">
+            <div class="left">
+                <img src="./images/flora-heritage.jpg" alt="Wildlife heritage of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    Daringbadi is rich in biodiversity, with dense forests, rivers, and waterfalls supporting a variety
+                    of wildlife,
+                    birds, and medicinal plants. The pine forests and valleys create a habitat for both common and rare
+                    species.
+                </p>
+                <p>
+                    Conservation of these natural resources is integral to the region’s heritage. Local communities have
+                    traditionally
+                    coexisted with wildlife, using forests sustainably for food, medicine, and rituals. This wildlife
+                    and plant
+                    diversity makes Daringbadi a living museum of nature.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- Local Crafts & Artisans Section -->
+        <h2 class="section-title">🎨 Local Crafts & Artisans</h2>
+                <div class="line"></div>
+        <div class="heritage-content">
+            <div class="left">
+                <img src="./images/local-craft.jpg"
+                    alt="Local crafts of Daringbadi">
+            </div>
+            <div class="right">
+                <p>
+                    Daringbadi is home to skilled artisans who create beautiful handicrafts, handwoven textiles, bamboo
+                    work,
+                    and traditional jewelry. These crafts are deeply rooted in tribal culture and passed down through
+                    generations.
+                </p>
+                <p>
+                    Many of these items are not just decorative but hold cultural significance, reflecting the beliefs,
+                    stories, and history of the community. Supporting local artisans helps preserve this rich heritage
+                    while providing livelihoods to the local people.
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </section>
+</body>
+
+</html>
